@@ -5,6 +5,8 @@ import Movies from "./pages/movies/Movies";
 import Series from "./pages/series/Series";
 import Favorites from "./pages/favorites/Favorites";
 import Downloads from "./pages/downloads/Downloads";
+import Missing from "./pages/missing/Missing";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -12,11 +14,13 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/animes" element={<Animes />} />
-        <Route path="/movies" element={<Movies />} />
+        <Route path="/" element={<Movies />} />
         <Route path="/series" element={<Series />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/downloads" element={<Downloads />} />
+        <Route path="/*" element={<Missing />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
