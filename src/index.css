@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+}
+
+body {
+  background-color: #849c84;
+}
+.carousel-text,
+.figure-caption,
+.footer-text,
+.copyright-text {
+  font-family: "Inconsolata", monospace;
+  font-size: large;
+}
+/* navbar */
+.navbar {
+  background-color: #132328;
+  z-index: 3;
+  position: sticky;
+  top: 0;
+}
+
+/* header-menus */
+.navbar-toggler,
+.nav-link,
+.dropdown-menu,
+.search_btn {
+  background-color: #e4dbb4;
+  color: #132328;
+}
+
+.nav-link:hover {
+  background-color: #132328;
+  color: #e4dbb4;
+}
+.search_btn:hover {
+  background-color: #132328;
+  color: #e4dbb4;
+}
+.dropdown-item:hover {
+  background-color: #132328;
+  color: #e4dbb4;
+}
+
+/* carousel */
+.carousel-caption-header {
+  font-weight: bold;
+}
+#btn-trailer {
+  background: transparent;
+  border-color: #e4dbb4;
+}
+
+/* body */
+.content_part {
+  border-bottom: #132328 solid 1px;
+}
+.cat_header {
+  border-left: #e4dbb4 solid 5px;
+}
+.anchor_page {
+  margin-left: 5px;
+  color: #132328;
+}
+
+.figure-img:hover {
+  transform: scale(1.1);
+}
+/* footer */
+.footer-container {
+  color: #132328;
+}
+.footer-header {
+  border-left: #e4dbb4 solid 5px;
+}
+.footer-header-2 {
+  margin-left: 5px;
+}
+.footer-ul {
+  list-style: none;
+}
+.social_icon,
+.footer-text {
+  color: #132328;
+}
+#cr {
+  background-color: #132328;
+  color: #e4dbb4;
+  margin-bottom: auto;
+}
