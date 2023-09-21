@@ -2,6 +2,7 @@ import React from "react";
 import Chillax from "../images/Chillax.png";
 import { Link } from "react-router-dom";
 import Search from "./Search";
+import DarkMode from "./DarkMode";
 
 const Navbar = () => {
   return (
@@ -36,45 +37,22 @@ const Navbar = () => {
               <Link
                 className="nav-link fw-bold rounded ps-2 my-1"
                 aria-current="page"
-                to="/shows"
-              >
-                TV Shows
-              </Link>
-            </li>
-            <li className="nav-item ms-lg-2">
-              <Link
-                className="nav-link fw-bold rounded ps-2 my-1"
-                aria-current="page"
                 to="/favorites"
               >
                 Favorite
               </Link>
             </li>
-            <li className="nav-item dropdown ms-lg-2">
+            <li className="nav-item ms-lg-2">
               <Link
-                className="nav-link dropdown-toggle fw-bold rounded ps-2 my-1"
-                to="/"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+                className="nav-link fw-bold rounded ps-2 my-1"
+                to="/aboutus"
               >
-                More
+                About Us
               </Link>
-              <ul className="dropdown-menu">
-                <li>
-                  <Link className="dropdown-item fw-bold" to="/downloads">
-                    Downloads
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item fw-bold" to="/aboutus">
-                    About Us
-                  </Link>
-                </li>
-              </ul>
             </li>
           </ul>
           <Search />
+          <DarkMode />
         </div>
       </div>
     </nav>
