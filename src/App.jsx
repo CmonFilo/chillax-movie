@@ -6,6 +6,7 @@ import Downloads from "./pages/downloads/Downloads";
 import Missing from "./pages/missing/Missing";
 import Footer from "./components/Footer";
 import AboutUs from "./pages/aboutUs/AboutUs";
+import MovieDetails from "./pages/movies/MovieDetails";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/downloads" element={<Downloads />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/*" element={<Missing />} />
+        <Route path="/:id" element={<MovieDetails/>} />
       </Routes>
       {/* <Footer /> */}
     </Router>

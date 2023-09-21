@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(20);
+  const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
     const apiUrl =
@@ -14,6 +15,7 @@ const Movies = () => {
       .get(apiUrl)
       .then((response) => {
         setMovies(response.data.results);
+        setTotalPages(response.data.total_pages);
       })
       .catch((error) => {
         console.error("Error fetching data", error);
@@ -34,11 +36,13 @@ const Movies = () => {
       <ul>
         {movies.map((movie) => (
           <li key={movie.id}>
+            <Link to={`/${movie.id}`}>
             <h2>{movie.title}</h2>
             <img
               src={`${basePosterUrl}${movie.poster_path}`}
               alt={movie.title}
             />
+            </Link>
           </li>
         ))}
       </ul>
