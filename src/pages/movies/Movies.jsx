@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -35,13 +37,17 @@ const Movies = () => {
       </h1>
       <div className="row">
         {movies.map((movie) => (
-          <li key={movie.id}>
-            <h2>{movie.title}</h2>
-            <img
-              src={`${basePosterUrl}${movie.poster_path}`}
-              alt={movie.title}
-            />
-          </li>
+          <div className="col-4 col-md-3 text-center" key={movie.id}>
+            <figure className="figure">
+              <img
+                src={`${basePosterUrl}${movie.poster_path}`}
+                alt={movie.title}
+                className="figure-img img-fluid"
+                style={{ width: "300px", height: "480px" }}
+              />
+              <figcaption class="figure-caption">{movie.title}</figcaption>
+            </figure>
+          </div>
         ))}
       </div>
 
@@ -51,7 +57,7 @@ const Movies = () => {
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
-          <FontAwesomeIcon icon={faAnglesLeft} className="me-2"/>
+          <FontAwesomeIcon icon={faAnglesLeft} className="me-2" />
           Previous
         </button>
         <button
@@ -60,7 +66,7 @@ const Movies = () => {
           disabled={currentPage === totalPages}
         >
           Next
-          <FontAwesomeIcon icon={faAnglesRight} className="ms-2"/>
+          <FontAwesomeIcon icon={faAnglesRight} className="ms-2" />
         </button>
       </div>
     </div>
