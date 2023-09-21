@@ -18,7 +18,7 @@ function App() {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/*" element={<Missing />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }

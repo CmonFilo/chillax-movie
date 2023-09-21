@@ -36,7 +36,7 @@ const Navbar = () => {
               <Link
                 className="nav-link fw-bold rounded ps-2 my-1"
                 aria-current="page"
-                to="/favorite"
+                to="/favorites"
               >
                 Favorite
               </Link>
