@@ -1,7 +1,6 @@
-// src/components/MovieDetails.js
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const MovieDetails = () => {
   const {id} = useParams();
@@ -24,12 +23,6 @@ const MovieDetails = () => {
   if (!movieDetails) {
     return <div>Loading...</div>;
   }
-  // const {id} = useParams();
-
-  // useEffect(()=> {
-  //   const apiKey = "936af801afc98e81ee8d785b94b8e3a8";
-  //   const apiUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`;
-  // },[id])
 
   return (
     <div>
@@ -41,6 +34,7 @@ const MovieDetails = () => {
       <p>{movieDetails.overview}</p>
       <p>Release Date: {movieDetails.release_date}</p>
       <p>Rating: {movieDetails.vote_average}</p>
+      <p>Back To All Movies <Link to={'/'}>"CLICK HERE"</Link></p>
     </div>
   );
 };
