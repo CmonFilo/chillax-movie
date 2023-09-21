@@ -42,7 +42,7 @@ const Movies = () => {
               <img
                 src={`${basePosterUrl}${movie.poster_path}`}
                 alt={movie.title}
-                className="figure-img img-fluid"
+                className="figure-img img-fluid rounded"
                 style={{ width: "300px", height: "480px" }}
               />
               <figcaption class="figure-caption">{movie.title}</figcaption>

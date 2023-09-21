@@ -18,7 +18,7 @@ function App() {
         <Route path="/*" element={<Missing />} />
         <Route path="/:id" element={<MovieDetails/>} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }
