@@ -24,12 +24,6 @@ const MovieDetails = () => {
   if (!movieDetails) {
     return <div>Loading...</div>;
   }
-  // const {id} = useParams();
-
-  // useEffect(()=> {
-  //   const apiKey = "936af801afc98e81ee8d785b94b8e3a8";
-  //   const apiUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`;
-  // },[id])
 
   return (
     <div>
