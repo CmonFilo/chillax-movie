@@ -72,7 +72,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item fw-bold" to="/">
+                  <Link className="dropdown-item fw-bold" to="/aboutus">
                     About Us
                   </Link>
                 </li>

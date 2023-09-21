@@ -9,6 +9,9 @@ const Footer = () => {
         marginBottom: "auto",
         backgroundColor: "#132328",
         color: "#e4dbb4",
+        position: "fixed",
+        width: "100%",
+        bottom: "0",
       }}>
       &copy; Copyright 2023 Chillax
     </footer>

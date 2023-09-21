@@ -7,6 +7,7 @@ import Favorites from "./pages/favorites/Favorites";
 import Downloads from "./pages/downloads/Downloads";
 import Missing from "./pages/missing/Missing";
 import Footer from "./components/Footer";
+import AboutUs from "./pages/aboutUs/AboutUs";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/series" element={<Series />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/downloads" element={<Downloads />} />
+        <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/*" element={<Missing />} />
       </Routes>
       <Footer />
