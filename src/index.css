@@ -61,8 +61,8 @@ body {
 .content_part {
   border-bottom: #132328 solid 1px;
 }
-.cat_header {
-  border-left: #e4dbb4 solid 5px;
+.header_CL {
+  border-left: #e4dbb4 solid 8px;
 }
 .anchor_page {
   margin-left: 5px;
@@ -70,7 +70,13 @@ body {
 }
 
 .figure-img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+/* pagination button */
+.pagination-btn_CL{
+  background-color: #132328;
+  color: #e4dbb4;
 }
 /* footer */
 .footer-container {
