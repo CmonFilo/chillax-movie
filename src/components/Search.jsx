@@ -6,8 +6,7 @@ const Search = () => {
       <input
         className="form-control me-2 fw-bold"
         type="search"
-        placeholder="Search for fast"
-        aria-label="Search"
+        placeholder="Search movies"
       />
       <button className="btn search_btn fw-bold" type="submit">
         Search
