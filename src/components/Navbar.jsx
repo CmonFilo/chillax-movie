@@ -36,18 +36,9 @@ const Navbar = () => {
               <Link
                 className="nav-link fw-bold rounded ps-2 my-1"
                 aria-current="page"
-                to="/series"
+                to="/favorite"
               >
-                Series
-              </Link>
-            </li>
-            <li className="nav-item ms-lg-2">
-              <Link
-                className="nav-link fw-bold rounded ps-2 my-1"
-                aria-current="page"
-                to="/animes"
-              >
-                Anime
+                Favorite
               </Link>
             </li>
             <li className="nav-item dropdown ms-lg-2">
@@ -64,11 +55,6 @@ const Navbar = () => {
                 <li>
                   <Link className="dropdown-item fw-bold" to="/downloads">
                     Downloads
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item fw-bold" to="/favorites">
-                    Favorites
                   </Link>
                 </li>
                 <li>
