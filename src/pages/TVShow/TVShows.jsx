@@ -4,18 +4,18 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
-const Movies = () => {
-  const [movies, setMovies] = useState([]);
+const TVShows = () => {
+  const [shows, setShows] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
-    const apiUrl = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=936af801afc98e81ee8d785b94b8e3a8&page=${currentPage}`;
+    const apiUrl = `https://api.themoviedb.org/3/tv/popular?&api_key=936af801afc98e81ee8d785b94b8e3a8&page=${currentPage}`;
 
     axios
       .get(apiUrl)
       .then((response) => {
-        setMovies(response.data.results);
+        setShows(response.data.results);
         setTotalPages(response.data.total_pages);
       })
       .catch((error) => {
@@ -34,20 +34,20 @@ const Movies = () => {
   return (
     <div className="container">
       <h1 className="header_CL mt-2">
-        <span className="ms-2 fw-bold">All Movies</span>
+        <span className="ms-2 fw-bold">TV Shows</span>
       </h1>
       <div className="row">
-        {movies.map((movie) => (
-          <Link to={`/${movie.id}`}>
-            <div className="col-4 col-md-3 text-center" key={movie.id}>
+        {shows.map((show) => (
+          <Link to={`/shows/${show.id}`}>
+            <div className="col-4 col-md-3 text-center" key={show.id}>
               <figure className="figure">
                 <img
-                  src={`${basePosterUrl}${movie.poster_path}`}
-                  alt={movie.title}
+                  src={`${basePosterUrl}${show.poster_path}`}
+                  alt={show.name}
                   style={{ width: "320px", height: "500px" }}
                   className="figure-img img-fluid rounded"
                 />
-                <figcaption className="figure-caption">{movie.title}</figcaption>
+                <figcaption className="figure-caption">{show.name}</figcaption>
               </figure>
             </div>
           </Link>
@@ -74,4 +74,4 @@ const Movies = () => {
   );
 };
 
-export default Movies;
+export default TVShows;

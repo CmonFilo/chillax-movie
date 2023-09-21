@@ -1,7 +1,6 @@
-// src/components/MovieDetails.js
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const MovieDetails = () => {
   const {id} = useParams();
@@ -35,6 +34,7 @@ const MovieDetails = () => {
       <p>{movieDetails.overview}</p>
       <p>Release Date: {movieDetails.release_date}</p>
       <p>Rating: {movieDetails.vote_average}</p>
+      <p>Back To All Movies <Link to={'/'}>"CLICK HERE"</Link></p>
     </div>
   );
 };
