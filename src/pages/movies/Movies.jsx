@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -35,13 +38,19 @@ const Movies = () => {
       </h1>
       <div className="row">
         {movies.map((movie) => (
-          <li key={movie.id}>
-            <h2>{movie.title}</h2>
-            <img
-              src={`${basePosterUrl}${movie.poster_path}`}
-              alt={movie.title}
-            />
-          </li>
+          <Link to={`/${movie.id}`}>
+            <div className="col-4 col-md-3 text-center" key={movie.id}>
+              <figure className="figure">
+                <img
+                  src={`${basePosterUrl}${movie.poster_path}`}
+                  alt={movie.title}
+                  style={{ width: "320px", height: "500px" }}
+                  className="figure-img img-fluid rounded"
+                />
+                <figcaption class="figure-caption">{movie.title}</figcaption>
+              </figure>
+            </div>
+          </Link>
         ))}
       </div>
 
@@ -49,18 +58,16 @@ const Movies = () => {
         <button
           className="btn pagination-btn_CL p-2 me-2"
           onClick={() => handlePageChange(currentPage - 1)}
-          disabled={currentPage === 1}
-        >
-          <FontAwesomeIcon icon={faAnglesLeft} className="me-2"/>
+          disabled={currentPage === 1}>
+          <FontAwesomeIcon icon={faAnglesLeft} className="me-2" />
           Previous
         </button>
         <button
           className="btn pagination-btn_CL p-2"
           onClick={() => handlePageChange(currentPage + 1)}
-          disabled={currentPage === totalPages}
-        >
+          disabled={currentPage === totalPages}>
           Next
-          <FontAwesomeIcon icon={faAnglesRight} className="ms-2"/>
+          <FontAwesomeIcon icon={faAnglesRight} className="ms-2" />
         </button>
       </div>
     </div>
@@ -68,5 +75,3 @@ const Movies = () => {
 };
 
 export default Movies;
-
-// https://api.themoviedb.org/3/tv/popular?&api_key=936af801afc98e81ee8d785b94b8e3a8&page=1
