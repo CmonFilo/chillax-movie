@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -8,8 +7,7 @@ const Movies = () => {
   const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
-    const apiUrl =
-      `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=936af801afc98e81ee8d785b94b8e3a8&page=${currentPage}`;
+    const apiUrl = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=936af801afc98e81ee8d785b94b8e3a8&page=${currentPage}`;
 
     axios
       .get(apiUrl)
@@ -31,32 +29,38 @@ const Movies = () => {
   };
 
   return (
-    <div>
-      <h1>Movie Lists</h1>
-      <ul>
+    <div className="container">
+      <h1 className="header_CL mt-2">
+        <span className="ms-2 fw-bold">All Movies</span>
+      </h1>
+      <div className="row">
         {movies.map((movie) => (
           <li key={movie.id}>
-            <Link to={`/${movie.id}`}>
             <h2>{movie.title}</h2>
             <img
               src={`${basePosterUrl}${movie.poster_path}`}
               alt={movie.title}
             />
-            </Link>
           </li>
         ))}
-      </ul>
+      </div>
 
-      <div className="pagination">
+      <div className="pagination justify-content-center">
         <button
+          className="btn pagination-btn_CL p-2 me-2"
           onClick={() => handlePageChange(currentPage - 1)}
-          disabled={currentPage === 1}>
+          disabled={currentPage === 1}
+        >
+          <FontAwesomeIcon icon={faAnglesLeft} className="me-2"/>
           Previous
         </button>
         <button
+          className="btn pagination-btn_CL p-2"
           onClick={() => handlePageChange(currentPage + 1)}
-          disabled={currentPage === totalPages}>
+          disabled={currentPage === totalPages}
+        >
           Next
+          <FontAwesomeIcon icon={faAnglesRight} className="ms-2"/>
         </button>
       </div>
     </div>
@@ -64,6 +68,5 @@ const Movies = () => {
 };
 
 export default Movies;
-
 
 // https://api.themoviedb.org/3/tv/popular?&api_key=936af801afc98e81ee8d785b94b8e3a8&page=1
