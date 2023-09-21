@@ -2,6 +2,7 @@ import React from "react";
 import Chillax from "../images/Chillax.png";
 import { Link } from "react-router-dom";
 import Search from "./Search";
+import DarkMode from "./DarkMode";
 
 const Navbar = () => {
   return (
@@ -51,6 +52,7 @@ const Navbar = () => {
             </li>
           </ul>
           <Search />
+          <DarkMode />
         </div>
       </div>
     </nav>

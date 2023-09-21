@@ -7,9 +7,20 @@
   box-sizing: border-box;
   font-family: "Barlow", sans-serif;
 }
-
+:root {
+  --first-color: #849c84;
+  --second-color: #132328;
+  --third-color: #e4dbb4;
+  --fourth-color: #e4dbb4;
+}
+.dark {
+  --first-color: black;
+  --second-color: #e4dbb4;
+  --third-color: black;
+  --fourth-color: #132328;
+}
 body {
-  background-color: #849c84;
+  background-color: var(--first-color);
 }
 .carousel-text,
 .figure-caption,
@@ -31,8 +42,8 @@ body {
 .nav-link,
 .dropdown-menu,
 .search_btn {
-  background-color: #e4dbb4;
-  color: #132328;
+  background-color: var(--third-color);
+  color: var(--second-color);
 }
 
 .nav-link:hover {
@@ -43,11 +54,13 @@ body {
   background-color: #132328;
   color: #e4dbb4;
 }
-.dropdown-item:hover {
-  background-color: #132328;
+.darkmode_btn_CL {
+  background-color: var(--third-color);
+  color: var(--second-color);
+}
+.darkmode_btn_CL:hover {
   color: #e4dbb4;
 }
-
 /* carousel */
 .carousel-caption-header {
   font-weight: bold;
@@ -62,11 +75,12 @@ body {
   border-bottom: #132328 solid 1px;
 }
 .header_CL {
-  border-left: #e4dbb4 solid 8px;
+  border-left: var(--fourth-color) solid 8px;
+  color: var(--second-color);
 }
-.anchor_page {
-  margin-left: 5px;
-  color: #132328;
+
+.figure-caption {
+  color: var(--second-color);
 }
 
 .figure-img:hover {
@@ -74,8 +88,11 @@ body {
 }
 
 /* pagination button */
-.pagination-btn_CL{
+.pagination-btn_CL {
   background-color: #132328;
+  color: #e4dbb4;
+}
+.pagination-btn_CL:hover {
   color: #e4dbb4;
 }
 /* footer */
@@ -99,4 +116,10 @@ body {
   background-color: #132328;
   color: #e4dbb4;
   margin-bottom: auto;
+}
+
+/* about page */
+.intro,
+.batch {
+  color: var(--second-color);
 }
