@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { Pagination } from "antd";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -25,12 +24,6 @@ const Movies = () => {
 
   const basePosterUrl = "https://image.tmdb.org/t/p/w500";
 
-  const handlePageChange = (newPage) => {
-    if (newPage >= 1 && newPage <= totalPages) {
-      setCurrentPage(newPage);
-    }
-  };
-
   return (
     <div className="container">
       <h1 className="header_CL mt-2">
@@ -40,37 +33,31 @@ const Movies = () => {
         {movies.map((movie) => (
           <div className="col-4 col-md-3 text-center" key={movie.id}>
             <Link to={`${movie.id}`}>
-            <figure className="figure">
-              <img
-                src={`${basePosterUrl}${movie.poster_path}`}
-                alt={movie.title}
-                className="figure-img img-fluid rounded"
-                style={{ width: "300px", height: "480px" }}
-              />
-              <figcaption class="figure-caption" style={{fontSize:'20px'}}>{movie.title}</figcaption>
-            </figure>
+              <figure className="figure">
+                <img
+                  src={`${basePosterUrl}${movie.poster_path}`}
+                  alt={movie.title}
+                  className="figure-img img-fluid rounded"
+                  style={{ width: "300px", height: "480px" }}
+                />
+                <figcaption
+                  className="figure-caption"
+                  style={{ fontSize: "20px" }}>
+                  {movie.title}
+                </figcaption>
+              </figure>
             </Link>
           </div>
         ))}
       </div>
-
       <div className="pagination justify-content-center">
-        <button
-          className="btn pagination-btn_CL p-2 me-2"
-          onClick={() => handlePageChange(currentPage - 1)}
-          disabled={currentPage === 1}
-        >
-          <FontAwesomeIcon icon={faAnglesLeft} className="me-2" />
-          Previous
-        </button>
-        <button
-          className="btn pagination-btn_CL p-2"
-          onClick={() => handlePageChange(currentPage + 1)}
+        <Pagination
+          defaultCurrent={1}
+          total={150}
+          onChange={(currentPage) => setCurrentPage(currentPage)}
           disabled={currentPage === totalPages}
-        >
-          Next
-          <FontAwesomeIcon icon={faAnglesRight} className="ms-2" />
-        </button>
+          style={{textAlign: 'center'}}
+        />
       </div>
     </div>
   );

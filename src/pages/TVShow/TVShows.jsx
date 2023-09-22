@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import { Pagination } from "antd";
 
 const TVShows = () => {
   const [shows, setShows] = useState([]);
@@ -24,12 +23,6 @@ const TVShows = () => {
   }, [currentPage]);
 
   const basePosterUrl = "https://image.tmdb.org/t/p/w500";
-
-  const handlePageChange = (newPage) => {
-    if (newPage >= 1 && newPage <= totalPages) {
-      setCurrentPage(newPage);
-    }
-  };
 
   return (
     <div className="container">
@@ -54,22 +47,13 @@ const TVShows = () => {
         ))}
       </div>
 
-      <div className="pagination justify-content-center">
-        <button
-          className="btn pagination-btn_CL p-2 me-2"
-          onClick={() => handlePageChange(currentPage - 1)}
-          disabled={currentPage === 1}>
-          <FontAwesomeIcon icon={faAnglesLeft} className="me-2" />
-          Previous
-        </button>
-        <button
-          className="btn pagination-btn_CL p-2"
-          onClick={() => handlePageChange(currentPage + 1)}
-          disabled={currentPage === totalPages}>
-          Next
-          <FontAwesomeIcon icon={faAnglesRight} className="ms-2" />
-        </button>
-      </div>
+      <Pagination
+          defaultCurrent={1}
+          total={150}
+          onChange={(currentPage) => setCurrentPage(currentPage)}
+          disabled={currentPage === totalPages}
+          style={{textAlign: 'center'}}
+        />
     </div>
   );
 };
