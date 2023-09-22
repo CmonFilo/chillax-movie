@@ -1,7 +1,7 @@
+import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import "../index.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-regular-svg-icons";
 
 const DarkMode = () => {
   const [theme, setTheme] = useState("light");
@@ -17,8 +17,7 @@ const DarkMode = () => {
   }, [theme]);
   return (
     <div className={`${theme}`}>
-      <button className="btn darkmode_btn_CL ms-2" onClick={toggleTheme}>
-        {" "}
+      <button onClick={toggleTheme} className="btn darkmode_btn_CL ms-2">
         <FontAwesomeIcon icon={faMoon} />
       </button>
     </div>
