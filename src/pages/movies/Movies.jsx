@@ -8,6 +8,7 @@ const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     const apiUrl = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=936af801afc98e81ee8d785b94b8e3a8&page=${currentPage}`;
@@ -25,11 +26,11 @@ const Movies = () => {
 
   const basePosterUrl = "https://image.tmdb.org/t/p/w500";
 
-  const handlePageChange = (newPage) => {
-    if (newPage >= 1 && newPage <= totalPages) {
-      setCurrentPage(newPage);
-    }
-  };
+  const addFavoriteMovie = (movie) => {
+    const newFavoriteList = [...favorites, movie];
+    setFavorites(newFavoriteList); 
+    console.log(setFavorites);
+  }
 
   return (
     <div className="container CL_container">
@@ -39,7 +40,8 @@ const Movies = () => {
       <div className="row">
         {movies.map((movie) => (
           <div className="col-4 col-md-3 text-center" key={movie.id}>
-            <Link to={`${movies.id}`}>
+            <Link to={`${movie.id}`}>
+
               <figure className="figure">
                 <img
                   src={`${basePosterUrl}${movie.poster_path}`}
@@ -69,10 +71,8 @@ const Movies = () => {
           className="btn pagination-btn_CL p-2"
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-        >
-          Next
-          <FontAwesomeIcon icon={faAnglesRight} className="ms-2" />
-        </button>
+          style={{textAlign: 'center'}}
+        />
       </div>
     </div>
   );

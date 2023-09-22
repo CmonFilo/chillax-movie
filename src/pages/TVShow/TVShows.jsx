@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import { Pagination } from "antd";
 
 const TVShows = () => {
   const [shows, setShows] = useState([]);
@@ -25,12 +24,6 @@ const TVShows = () => {
 
   const basePosterUrl = "https://image.tmdb.org/t/p/w500";
 
-  const handlePageChange = (newPage) => {
-    if (newPage >= 1 && newPage <= totalPages) {
-      setCurrentPage(newPage);
-    }
-  };
-
   return (
     <div className="container CL_container">
       <h1 className="header_CL mt-2">
@@ -38,8 +31,9 @@ const TVShows = () => {
       </h1>
       <div className="row">
         {shows.map((show) => (
-          <div className="col-4 col-md-3 text-center" key={show.id}>
-            <Link to={`/shows/${show.id}`}>
+            <div className="col-4 col-md-3 text-center" key={show.id}>
+              <Link to={`/shows/${show.id}`}>
+
               <figure className="figure">
                 <img
                   src={`${basePosterUrl}${show.poster_path}`}
@@ -47,6 +41,7 @@ const TVShows = () => {
                   style={{ width: "320px", height: "500px" }}
                   className="figure-img img-fluid rounded"
                 />
+
                 <figcaption className="figure-caption">
                   <span>{show.name}</span>
                 </figcaption>
