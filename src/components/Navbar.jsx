@@ -47,7 +47,7 @@ const Navbar = () => {
           </ul>
         </div>
           <Search/>
-          <DarkMode/>
+          {/* <DarkMode/> */}
       </div>
     </nav>
   );

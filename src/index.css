@@ -20,7 +20,7 @@
   --fourth-color: #132328;
 }
 #root {
-  background-color: var(--first-color);
+  background-color: #849c84;
 }
 .carousel-text,
 .figure-caption,
@@ -41,21 +41,21 @@
 .navbar-toggler,
 .nav-item,
 .search_btn {
-  background-color: var(--fourth-color);
-  color: var(--second-color);
+  background-color: #e4dbb4;
+  color: #132328;
 }
 
 .nav-item:hover {
-  background-color: var(--second-color);
-  color: var(--fourth-color);
+  background-color: #132328;
+  color: #e4dbb4;
 }
 .search_btn:hover {
   background-color: #132328;
   color: #e4dbb4;
 }
 .darkmode_btn_CL {
-  background-color: var(--third-color);
-  color: var(--second-color);
+  background-color:#e4dbb4;
+  color: #132328;
 }
 .darkmode_btn_CL:hover {
   color: #e4dbb4;
@@ -66,12 +66,12 @@
   border-bottom: #132328 solid 1px;
 }
 .header_CL {
-  border-left: var(--fourth-color) solid 8px;
-  color: var(--second-color);
+  border-left: #e4dbb4 solid 8px;
+  color: #132328;
 }
 
 span {
-  color: var(--second-color);
+  color: #132328;
 }
 
 .figure-img:hover {
@@ -112,7 +112,7 @@ span {
 /* about page */
 .intro,
 .batch {
-  color: var(--second-color);
+  color: #132328;
 }
 
 .card_CL {
