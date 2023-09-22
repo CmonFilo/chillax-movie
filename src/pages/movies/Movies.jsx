@@ -32,7 +32,7 @@ const Movies = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container CL_container">
       <h1 className="header_CL mt-2">
         <span className="ms-2 fw-bold">All Movies</span>
       </h1>
@@ -56,7 +56,7 @@ const Movies = () => {
         ))}
       </div>
 
-      <div className="pagination justify-content-center">
+      <div className="pagination justify-content-center mb-3">
         <button
           className="btn pagination-btn_CL p-2 me-2"
           onClick={() => handlePageChange(currentPage - 1)}

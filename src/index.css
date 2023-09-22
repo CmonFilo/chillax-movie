@@ -59,17 +59,9 @@
 .darkmode_btn_CL:hover {
   color: #e4dbb4;
 }
-/* carousel */
-.carousel-caption-header {
-  font-weight: bold;
-}
-#btn-trailer {
-  background: transparent;
-  border-color: #e4dbb4;
-}
 
 /* body */
-.content_part {
+.CL_container {
   border-bottom: #132328 solid 1px;
 }
 .header_CL {

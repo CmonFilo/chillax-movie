@@ -5,13 +5,13 @@ import YMW from "../../images/YMW.jpg";
 const AboutUs = () => {
   return (
     <div
-      className="intro"
-      style={{ width: " 60%", display: "block", marginLeft: "20%" }}
+      className="intro container CL_container"
+      // style={{ width: " 60%", display: "block", marginLeft: "20%" }}
     >
       <h1 style={{ textAlign: "center", marginTop: "40px" }}>
         Lights, camera, action!{" "}
       </h1>
-      <div style={{ marginTop: "20px", textAlign: "justify" }}>
+      <div style={{ marginTop: "20px", textAlign: "center" }}>
         Welcome to a world where creativity knows no bounds and storytelling
         takes center stage. We are the passionate minds behind Chillax, a
         cinematic journey that promises to captivate your senses and transport
@@ -21,7 +21,12 @@ const AboutUs = () => {
       <h3 style={{ margin: "40px", textAlign: "center" }}>Meet The Team</h3>
       <div
         className="team"
-        style={{ display: "flex", justifyContent: "space-around" }}
+        style={{
+          width: "60%",
+          marginLeft: "20%",
+          display: "flex",
+          justifyContent: "space-around",
+        }}
       >
         <div>
           <img
@@ -29,7 +34,7 @@ const AboutUs = () => {
             alt=""
             style={{
               height: "180px",
-              marginBottom: " 30px",
+              marginBottom: "30px",
               border: "solid 2px",
               borderRadius: "50%",
             }}
