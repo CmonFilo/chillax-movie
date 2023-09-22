@@ -6,9 +6,9 @@ const Search = () => {
       <input
         className="form-control me-2 fw-bold"
         type="search"
-        placeholder="Search movies"
+        placeholder="Search movies & shows"
       />
-      <button className="btn search_btn fw-bold" type="submit">
+      <button className="search_btn rounded p-1 fw-bold" type="submit">
         Search
       </button>
     </form>

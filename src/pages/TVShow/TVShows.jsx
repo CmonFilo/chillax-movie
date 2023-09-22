@@ -38,8 +38,8 @@ const TVShows = () => {
       </h1>
       <div className="row">
         {shows.map((show) => (
-          <Link to={`/shows/${show.id}`}>
-            <div className="col-4 col-md-3 text-center" key={show.id}>
+          <div className="col-4 col-md-3 text-center" key={show.id}>
+            <Link to={`/shows/${show.id}`}>
               <figure className="figure">
                 <img
                   src={`${basePosterUrl}${show.poster_path}`}
@@ -47,10 +47,12 @@ const TVShows = () => {
                   style={{ width: "320px", height: "500px" }}
                   className="figure-img img-fluid rounded"
                 />
-                <figcaption className="figure-caption">{show.name}</figcaption>
+                <figcaption className="figure-caption">
+                  <span>{show.name}</span>
+                </figcaption>
               </figure>
-            </div>
-          </Link>
+            </Link>
+          </div>
         ))}
       </div>
 
@@ -58,14 +60,16 @@ const TVShows = () => {
         <button
           className="btn pagination-btn_CL p-2 me-2"
           onClick={() => handlePageChange(currentPage - 1)}
-          disabled={currentPage === 1}>
+          disabled={currentPage === 1}
+        >
           <FontAwesomeIcon icon={faAnglesLeft} className="me-2" />
           Previous
         </button>
         <button
           className="btn pagination-btn_CL p-2"
           onClick={() => handlePageChange(currentPage + 1)}
-          disabled={currentPage === totalPages}>
+          disabled={currentPage === totalPages}
+        >
           Next
           <FontAwesomeIcon icon={faAnglesRight} className="ms-2" />
         </button>
