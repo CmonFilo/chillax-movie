@@ -14,9 +14,9 @@
   --fourth-color: #e4dbb4;
 }
 .dark {
-  --first-color: black;
+  --first-color: rgb(24, 23, 23);
   --second-color: #e4dbb4;
-  --third-color: black;
+  --third-color: rgb(24, 23, 23);
   --fourth-color: #132328;
 }
 body {
