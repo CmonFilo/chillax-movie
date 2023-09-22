@@ -25,7 +25,7 @@ const TVShows = () => {
   const basePosterUrl = "https://image.tmdb.org/t/p/w500";
 
   return (
-    <div className="container">
+    <div className="container CL_container">
       <h1 className="header_CL mt-2">
         <span className="ms-2 fw-bold">TV Shows</span>
       </h1>
@@ -33,6 +33,7 @@ const TVShows = () => {
         {shows.map((show) => (
             <div className="col-4 col-md-3 text-center" key={show.id}>
               <Link to={`/shows/${show.id}`}>
+
               <figure className="figure">
                 <img
                   src={`${basePosterUrl}${show.poster_path}`}
@@ -40,20 +41,34 @@ const TVShows = () => {
                   style={{ width: "320px", height: "500px" }}
                   className="figure-img img-fluid rounded"
                 />
-                <figcaption className="figure-caption" style={{fontSize:'20px'}}>{show.name}</figcaption>
+
+                <figcaption className="figure-caption">
+                  <span>{show.name}</span>
+                </figcaption>
               </figure>
-          </Link>
-            </div>
+            </Link>
+          </div>
         ))}
       </div>
 
-      <Pagination
-          defaultCurrent={1}
-          total={150}
-          onChange={(currentPage) => setCurrentPage(currentPage)}
+      <div className="pagination justify-content-center mb-3">
+        <button
+          className="btn pagination-btn_CL p-2 me-2"
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+        >
+          <FontAwesomeIcon icon={faAnglesLeft} className="me-2" />
+          Previous
+        </button>
+        <button
+          className="btn pagination-btn_CL p-2"
+          onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          style={{textAlign: 'center'}}
-        />
+        >
+          Next
+          <FontAwesomeIcon icon={faAnglesRight} className="ms-2" />
+        </button>
+      </div>
     </div>
   );
 };
