@@ -28,9 +28,9 @@ const Movies = () => {
 
   const addFavoriteMovie = (movie) => {
     const newFavoriteList = [...favorites, movie];
-    setFavorites(newFavoriteList); 
+    setFavorites(newFavoriteList);
     console.log(setFavorites);
-  }
+  };
 
   return (
     <div className="container CL_container">
@@ -41,7 +41,6 @@ const Movies = () => {
         {movies.map((movie) => (
           <div className="col-4 col-md-3 text-center" key={movie.id}>
             <Link to={`${movie.id}`}>
-
               <figure className="figure">
                 <img
                   src={`${basePosterUrl}${movie.poster_path}`}
@@ -71,8 +70,11 @@ const Movies = () => {
           className="btn pagination-btn_CL p-2"
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          style={{textAlign: 'center'}}
-        />
+          style={{ textAlign: "center" }}
+        >
+          Next
+          <FontAwesomeIcon icon={faAnglesRight} className="ms-2" />
+        </button>
       </div>
     </div>
   );
