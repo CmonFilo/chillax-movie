@@ -1,9 +1,9 @@
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
 const TVShowDetails = () => {
   const { id } = useParams();
@@ -28,7 +28,7 @@ const TVShowDetails = () => {
   }
 
   return (
-    <div className="container CL_container pb-5 my-5">
+    <div className="container CL_container pb-4 my-5">
       <div className="row g-0">
         <div className="col-md-4">
           <img
@@ -49,11 +49,19 @@ const TVShowDetails = () => {
               <p className="card-text">
                 First Air Date: {tvShowDetails.first_air_date}
               </p>
-              <p className="card-text mb-5">Rating: {tvShowDetails.vote_average}</p>
+              <p className="card-text mb-5">
+                Rating: {tvShowDetails.vote_average}
+              </p>
             </div>
           </div>
         </div>
       </div>
+      <p className="text-center mt-4">
+        <Link to={"/shows"} style={{ color: "#132328", textDecoration: "none" }}>
+          <FontAwesomeIcon icon={faArrowCircleLeft} />
+          Back To All TV Shows{" "}
+        </Link>
+      </p>
     </div>
   );
 };
