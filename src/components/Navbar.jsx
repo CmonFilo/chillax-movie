@@ -37,6 +37,15 @@ const Navbar = () => {
               <Link
                 className="nav-link fw-bold rounded ps-2 my-1"
                 aria-current="page"
+                to="/shows"
+              >
+                TV Show
+              </Link>
+            </li>
+            <li className="nav-item ms-lg-2">
+              <Link
+                className="nav-link fw-bold rounded ps-2 my-1"
+                aria-current="page"
                 to="/favorites"
               >
                 Favorite

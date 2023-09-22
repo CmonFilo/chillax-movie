@@ -38,8 +38,8 @@ const TVShows = () => {
       </h1>
       <div className="row">
         {shows.map((show) => (
-          <Link to={`/shows/${show.id}`}>
             <div className="col-4 col-md-3 text-center" key={show.id}>
+              <Link to={`/shows/${show.id}`}>
               <figure className="figure">
                 <img
                   src={`${basePosterUrl}${show.poster_path}`}
@@ -47,10 +47,10 @@ const TVShows = () => {
                   style={{ width: "320px", height: "500px" }}
                   className="figure-img img-fluid rounded"
                 />
-                <figcaption className="figure-caption">{show.name}</figcaption>
+                <figcaption className="figure-caption" style={{fontSize:'20px'}}>{show.name}</figcaption>
               </figure>
-            </div>
           </Link>
+            </div>
         ))}
       </div>
 

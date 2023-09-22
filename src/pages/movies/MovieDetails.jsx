@@ -34,7 +34,7 @@ const MovieDetails = () => {
       <p>{movieDetails.overview}</p>
       <p>Release Date: {movieDetails.release_date}</p>
       <p>Rating: {movieDetails.vote_average}</p>
-      <p>Back To All Movies <Link to={'/'}>"CLICK HERE"</Link></p>
+      <p>Back To All Movies <Link to={'/'} style={{textDecoration:'none'}}>"CLICK ME"</Link></p>
     </div>
   );
 };

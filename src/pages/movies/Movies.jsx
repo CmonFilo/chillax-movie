@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -38,6 +39,7 @@ const Movies = () => {
       <div className="row">
         {movies.map((movie) => (
           <div className="col-4 col-md-3 text-center" key={movie.id}>
+            <Link to={`${movie.id}`}>
             <figure className="figure">
               <img
                 src={`${basePosterUrl}${movie.poster_path}`}
@@ -45,8 +47,9 @@ const Movies = () => {
                 className="figure-img img-fluid rounded"
                 style={{ width: "300px", height: "480px" }}
               />
-              <figcaption class="figure-caption">{movie.title}</figcaption>
+              <figcaption class="figure-caption" style={{fontSize:'20px'}}>{movie.title}</figcaption>
             </figure>
+            </Link>
           </div>
         ))}
       </div>

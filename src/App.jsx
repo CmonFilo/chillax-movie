@@ -8,6 +8,7 @@ import AboutUs from "./pages/aboutUs/AboutUs";
 import MovieDetails from "./pages/movies/MovieDetails";
 import TVShows from './pages/TVShow/TVShows';
 import TVShow from './pages/TVShow/TVShow';
+import Download from "./pages/download/Download";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route index element={<TVShows />} />
         <Route path=":id" element={<TVShow />} /></Route>
         <Route path="favorites" element={<Favorites />} />
-        <Route path="downloads" element={<Downloads />} />
+        <Route path="download" element={<Download />} />
         <Route path="aboutus" element={<AboutUs />} />
         <Route path=":id" element={<MovieDetails/>} />
         </Route>

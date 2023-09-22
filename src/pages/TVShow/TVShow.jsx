@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const TVShowDetails = () => {
   const { id } = useParams();
@@ -34,6 +35,7 @@ const TVShowDetails = () => {
       <p>{tvShowDetails.overview}</p>
       <p>First Air Date: {tvShowDetails.first_air_date}</p>
       <p>Rating: {tvShowDetails.vote_average}</p>
+      <p>Back To All TV Shows <Link to={'/shows'} style={{textDecoration:'none'}}>"CLICK ME"</Link></p>
     </div>
   );
 };
