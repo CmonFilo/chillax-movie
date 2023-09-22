@@ -39,7 +39,8 @@
 
 /* header-menus */
 .navbar-toggler,
-.nav-item,.search_btn {
+.nav-item,
+.search_btn {
   background-color: var(--fourth-color);
   color: var(--second-color);
 }
@@ -112,4 +113,13 @@ span {
 .intro,
 .batch {
   color: var(--second-color);
+}
+
+.card_CL {
+  background-color: #132328;
+  height: 100%;
+}
+.span_detail_CL,
+.card-text {
+  color: #e4dbb4;
 }
