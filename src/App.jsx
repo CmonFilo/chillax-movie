@@ -11,8 +11,6 @@ import AdminSidebar from "./pages/admin/AdminSidebar";
 import Admin from "./pages/admin/Admin";
 
 function App() {
-  const [movieFavorites, setMovieFavorites] = useState([]);
-  const [tvShowFavorites, setTvShowFavorites] = useState([]);
 
   return (
     <Router>
