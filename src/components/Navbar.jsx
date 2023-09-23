@@ -39,11 +39,6 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item rounded me-2">
-              <Link className="nav-link fw-bold" to="/favorites">
-                Favorites
-              </Link>
-            </li>
-            <li className="nav-item rounded me-2">
               <Link className="nav-link fw-bold" to="/aboutus">
                 About Us
               </Link>
