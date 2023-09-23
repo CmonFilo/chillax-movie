@@ -55,7 +55,6 @@ const Movies = () => {
           </div>
         ))}
       </div>
-
       <Pagination
         defaultCurrent={1}
         total={150}
@@ -63,6 +62,25 @@ const Movies = () => {
         disabled={currentPage === totalPages}
         style={{ textAlign: "center" }}
       />
+      <div className="pagination justify-content-center mb-3">
+        <button
+          className="btn pagination-btn_CL p-2 me-2"
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+        >
+          <FontAwesomeIcon icon={faAnglesLeft} className="me-2" />
+          Previous
+        </button>
+        <button
+          className="btn pagination-btn_CL p-2"
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          style={{ textAlign: "center" }}
+        >
+          Next
+          <FontAwesomeIcon icon={faAnglesRight} className="ms-2" />
+        </button>
+      </div>
     </div>
   );
 };

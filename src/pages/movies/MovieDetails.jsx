@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
 const MovieDetails = () => {
   const { id } = useParams();
@@ -98,6 +100,12 @@ const MovieDetails = () => {
           </div>
         </div>
       </div>
+      <p className="text-center mt-4">
+        <Link to={"/"} style={{ color: "#132328", textDecoration: "none" }}>
+          <FontAwesomeIcon icon={faArrowCircleLeft} />
+          Back To All Movies{" "}
+        </Link>
+      </p>
     </div>
   );
 };

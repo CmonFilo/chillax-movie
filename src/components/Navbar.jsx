@@ -1,10 +1,14 @@
 import React from "react";
 import Chillax from "../images/Chillax.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Search from "./Search";
 import DarkMode from "./DarkMode";
 
 const Navbar = () => {
+  const location = useLocation();
+  if (location.pathname === "/admin") {
+    return null;
+  }
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
@@ -46,8 +50,8 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-          <Search/>
-          {/* <DarkMode/> */}
+        <Search />
+        {/* <DarkMode/> */}
       </div>
     </nav>
   );
