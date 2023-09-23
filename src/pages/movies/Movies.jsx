@@ -40,16 +40,15 @@ const Movies = () => {
       </h1>
       <div className="row">
         {movies.map((movie) => (
-          <div className="col-4 col-md-3 text-center" key={movie.id}>
+          <div className="col-4 col-md-2 text-center" key={movie.id}>
             <Link to={`${movie.id}`}>
               <figure className="figure">
                 <img
                   src={`${basePosterUrl}${movie.poster_path}`}
                   alt={movie.title}
                   className="figure-img img-fluid rounded"
-                  style={{ width: "300px", height: "480px" }}
                 />
-                <figcaption className="figure-caption">
+                <figcaption className="figure-caption fs-5">
                   <span>{movie.title}</span>
                 </figcaption>
               </figure>
