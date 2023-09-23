@@ -38,32 +38,29 @@ const Search = () => {
 
   return (
     <>
-    <div>
-      <form
-        className="d-flex"
-        role="search"
-        onSubmit={searchMovie}
-        name="query"
-        value={query}
-        onChange={changeHandler}>
-        <input
-          className="form-control me-2 fw-bold"
-          type="search"
-          placeholder="Search movies & shows"
-        />
-        <button className="search_btn rounded p-1 fw-bold" type="submit">
-          Search
-        </button>
-      </form>
-    </div>
-    <ul>
-    {movies.map((movie) => (
-      <li key={movie.id}>
-        <h3 style={{color: 'white'}}>{movie.title}</h3>
-      </li>
-    ))}
-  </ul>
-  </>
+      <div>
+        <form
+          className="d-flex"
+          role="search"
+          name="query"
+          value={query}
+          onChange={changeHandler}
+        >
+          <input
+            className="form-control me-2 fw-bold"
+            type="search"
+            placeholder="Search movies & shows"
+          />
+          <button
+            className="search_btn rounded p-1 fw-bold"
+            type="submit"
+            onSubmit={searchMovie}
+          >
+            Search
+          </button>
+        </form>
+      </div>
+    </>
   );
 };
 
