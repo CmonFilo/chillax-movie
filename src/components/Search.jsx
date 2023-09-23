@@ -38,7 +38,7 @@ const Search = () => {
 
   return (
     <>
-    <div>
+    <div className="d-block d-md-none d-lg-block" style={{width: "425px"}}>
       <form
         className="d-flex"
         role="search"

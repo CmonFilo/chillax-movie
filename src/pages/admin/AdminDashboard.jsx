@@ -65,7 +65,7 @@ const AdminDashboard = () => {
             <div className="row">
               <div className="card-body col-10 px-3">
                 <p className="card-text">Average time spent</p>
-                <h5>3 Hours per user</h5>
+                <h5>3 hours per user</h5>
                 <div className="card-footer">
                   <FontAwesomeIcon icon={faArrowDown} beat />
                   <small className="ms-2">-1% than last week</small>

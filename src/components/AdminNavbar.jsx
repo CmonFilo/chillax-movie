@@ -23,7 +23,10 @@ const AdminNavbar = () => {
   return (
     <nav className="navbar navbar_hb navbar-expand rounded m-3 py-3 mx-2 position-sticky">
       <h2 className="list_name_CL ms-3 d-none d-md-block">Admin</h2>
-      <button className="offcanvas_CL rounded ms-2 d-md-none" onClick={handleShow}>
+      <button
+        className="offcanvas_CL rounded ms-2 d-md-none"
+        onClick={handleShow}
+      >
         <FontAwesomeIcon icon={faBars} />
       </button>
       <Offcanvas show={show} onHide={handleClose}>
@@ -114,15 +117,6 @@ const AdminNavbar = () => {
             <Link className="nav-link me-2" to="/">
               <FontAwesomeIcon
                 icon={faArrowRightFromBracket}
-                size="xl"
-                className="list_name_CL"
-              />
-            </Link>
-          </li>
-          <li>
-            <Link className="nav-link me-2" to="/">
-              <FontAwesomeIcon
-                icon={faMoon}
                 size="xl"
                 className="list_name_CL"
               />

@@ -58,25 +58,24 @@ const MovieDetails = () => {
     //   </div>
 
     // </div>
-    <div className="container CL_container pb-3 my-5">
-      <div className="row g-0">
+    <div className="container CL_container pb-3 my-3 my-md-4">
+      <div className="row g-0 position-relative">
         <div className="col-md-4">
           <img
-            className="img-fluid rounded-start"
+            className="img-fluid rounded"
             src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
             alt={movieDetails.title}
+            style={{ width: "100%", height: "500px" }}
           />
         </div>
-        <div className="col-md-8">
-          <div className="card-body position-relative rounded-end card_CL text-center">
+        <div className="col-md-8" style={{ height: "500px" }}>
+          <div className="card-body position-relative rounded card_CL text-center">
             <h1 className="card-title py-5">
               <span className="span_detail_CL">{movieDetails.title}</span>
             </h1>
-            <p className="card-text position-absolute top-50 start-50 translate-middle">
-              {movieDetails.overview}
-            </p>
+            <p className="card-text p-2">{movieDetails.overview}</p>
             <div className="position-absolute bottom-0 start-50 translate-middle-x">
-              <p className="card-text">
+              <p className="card-text pt-2">
                 Release Date: {movieDetails.release_date}
               </p>
               <p className="card-text mb-5">
@@ -88,7 +87,7 @@ const MovieDetails = () => {
       </div>
       <p className="text-center mt-4">
         <Link to={"/"} style={{ color: "#132328", textDecoration: "none" }}>
-          <FontAwesomeIcon icon={faArrowCircleLeft} />
+          <FontAwesomeIcon icon={faArrowCircleLeft} className="me-2" />
           Back To All Movies{" "}
         </Link>
       </p>

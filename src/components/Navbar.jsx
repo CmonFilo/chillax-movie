@@ -3,6 +3,8 @@ import Chillax from "../images/Chillax.png";
 import { Link, useLocation } from "react-router-dom";
 import Search from "./Search";
 import DarkMode from "./DarkMode";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const location = useLocation();
@@ -10,7 +12,7 @@ const Navbar = () => {
     return null;
   }
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav className="navbar navbar-expand-md">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           <img src={Chillax} alt="" style={{ width: "100px" }} />
@@ -20,27 +22,25 @@ const Navbar = () => {
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          style={{ color: "#e4dbb4" }}
         >
-          <span className="navbar-toggler-icon"></span>
+          <FontAwesomeIcon icon={faBars} />
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item rounded me-2">
+            <li className="nav-item rounded mb-1 mb-md-0 ms-md-2">
               <Link className="nav-link fw-bold" aria-current="page" to="/">
-                Movies
+                <span className="px-2">Movies</span>
               </Link>
             </li>
-            <li className="nav-item rounded me-2">
+            <li className="nav-item rounded mb-1 mb-md-0 ms-md-2">
               <Link className="nav-link fw-bold" to="/shows">
-                TV Shows
+                <span className="px-2">TV Shows</span>
               </Link>
             </li>
-            <li className="nav-item rounded me-2">
+            <li className="nav-item rounded mb-1 mb-md-0 ms-md-2">
               <Link className="nav-link fw-bold" to="/aboutus">
-                About Us
+                <span className="px-2">About Us</span>
               </Link>
             </li>
           </ul>
