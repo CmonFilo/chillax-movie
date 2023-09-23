@@ -28,7 +28,7 @@ const TVShowDetails = () => {
   }
 
   return (
-    <div className="container CL_container pb-4 my-5">
+    <div className="container CL_container pb-3 my-5">
       <div className="row g-0">
         <div className="col-md-4">
           <img
@@ -52,25 +52,15 @@ const TVShowDetails = () => {
               <p className="card-text mb-5">
                 Rating: {tvShowDetails.vote_average}
               </p>
-              <p
-                style={{
-                  textAlign: "center",
-                  fontWeight: "bold",
-                  margin: "25px",
-                  fontSize: "20px",
-                  color: "#e4dbb4",
-                }}>
-                Back To All TV Shows{" "}
-                <Link to={"/shows"} style={{ textDecoration: "none" }}>
-                  "CLICK ME"
-                </Link>
-              </p>
             </div>
           </div>
         </div>
       </div>
       <p className="text-center mt-4">
-        <Link to={"/shows"} style={{ color: "#132328", textDecoration: "none" }}>
+        <Link
+          to={"/shows"}
+          style={{ color: "#132328", textDecoration: "none" }}
+        >
           <FontAwesomeIcon icon={faArrowCircleLeft} />
           Back To All TV Shows{" "}
         </Link>

@@ -12,16 +12,10 @@ import { Link } from "react-router-dom";
 
 const AdminSidebar = () => {
   return (
-    <div className="col-md-2 sidebar_CL position-fixed min-vh-100 m-3 rounded">
-      <div className="header text-center d-md-none">
-        <Link to="/admin">
-          <img
-            src={logo}
-            style={{ width: "40px" }}
-            className="mx-auto d-block"
-          />
-        </Link>
-      </div>
+    <div
+      className="col-md-2 sidebar_CL position-fixed rounded d-none d-md-block"
+      style={{ height: "100%" }}
+    >
       <nav className="d-none d-md-block">
         <div className="header my-3">
           <Link to="/admin">

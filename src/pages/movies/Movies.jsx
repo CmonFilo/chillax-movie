@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { Pagination } from "antd";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -40,16 +42,15 @@ const Movies = () => {
       </h1>
       <div className="row">
         {movies.map((movie) => (
-          <div className="col-4 col-md-3 text-center" key={movie.id}>
+          <div className="col-4 col-md-2 text-center" key={movie.id}>
             <Link to={`${movie.id}`}>
               <figure className="figure">
                 <img
                   src={`${basePosterUrl}${movie.poster_path}`}
                   alt={movie.title}
                   className="figure-img img-fluid rounded"
-                  style={{ width: "300px", height: "480px" }}
                 />
-                <figcaption className="figure-caption">
+                <figcaption className="figure-caption fs-6 fs-md-5">
                   <span>{movie.title}</span>
                 </figcaption>
               </figure>
@@ -58,13 +59,13 @@ const Movies = () => {
         ))}
       </div>
       <Pagination
+        className="mb-3"
         defaultCurrent={1}
         total={150}
         onChange={(currentPage) => setCurrentPage(currentPage)}
         disabled={currentPage === totalPages}
         style={{ textAlign: "center" }}
       />
-      
     </div>
   );
 };

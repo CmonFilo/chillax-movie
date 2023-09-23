@@ -4,7 +4,7 @@ import AdminDashboard from "./AdminDashboard";
 
 const Admin = () => {
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <div style={{ width: "100%", height: "100%" }}>
       <div className="container-fluid p-0">
         <div className="row g-0">
           <div className="col-md-2">

@@ -26,7 +26,39 @@ const MovieDetails = () => {
   }
 
   return (
-    <div className="container CL_container pb-5 my-5">
+    // <div className="details">
+    //   <h1
+    //     style={{ textAlign: "center", margin: "30px 0", fontWeight: "bolder" }}>
+    //     {movieDetails.title}
+    //   </h1>
+    //   <img
+    //     src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
+    //     alt={movieDetails.title}
+    //     style={{
+    //       width: "300px",
+    //       height: "480px",
+    //       marginLeft: "15%",
+    //       borderRadius: "5%",
+    //     }}
+    //   />
+    //   <div
+    //     className="detailsData"
+    //     style={{
+    //       width: "50%",
+    //       left: "40%",
+    //       position: "absolute",
+    //       top: "300px",
+    //       textAlign: "justify",
+    //       right: "30px",
+    //     }}>
+    //     <div>{movieDetails.overview}</div> <br />
+    //     <br />
+    // <div>Release Date: {movieDetails.release_date}</div>
+    // <div>Rating: {movieDetails.vote_average}</div>
+    //   </div>
+
+    // </div>
+    <div className="container CL_container pb-3 my-5">
       <div className="row g-0">
         <div className="col-md-4">
           <img
@@ -49,19 +81,6 @@ const MovieDetails = () => {
               </p>
               <p className="card-text mb-5">
                 Rating: {movieDetails.vote_average}
-              </p>
-              <p
-                style={{
-                  textAlign: "center",
-                  fontWeight: "bold",
-                  margin: "25px",
-                  fontSize: "20px",
-                  color: "#e4dbb4",
-                }}>
-                Back To All Movies{" "}
-                <Link to={"/"} style={{ textDecoration: "none" }}>
-                  "CLICK ME"
-                </Link>
               </p>
             </div>
           </div>

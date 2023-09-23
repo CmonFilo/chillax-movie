@@ -33,17 +33,16 @@ const TVShows = () => {
       </h1>
       <div className="row">
         {shows.map((show) => (
-          <div className="col-4 col-md-3 text-center" key={show.id}>
+          <div className="col-4 col-md-2 text-center" key={show.id}>
             <Link to={`/shows/${show.id}`}>
               <figure className="figure">
                 <img
                   src={`${basePosterUrl}${show.poster_path}`}
                   alt={show.name}
-                  style={{ width: "320px", height: "500px" }}
                   className="figure-img img-fluid rounded"
                 />
 
-                <figcaption className="figure-caption">
+                <figcaption className="figure-caption fs-6 fs-md-5">
                   <span>{show.name}</span>
                 </figcaption>
               </figure>
@@ -53,6 +52,7 @@ const TVShows = () => {
       </div>
 
       <Pagination
+        className="mb-3"
         defaultCurrent={1}
         total={150}
         onChange={(currentPage) => setCurrentPage(currentPage)}
