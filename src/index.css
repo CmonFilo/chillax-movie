@@ -134,3 +134,16 @@ span {
   list-style: none;
   border-top: 1px solid #e4dbb4;
 }
+.list-item_CL{
+  border-bottom: 1px solid #e4dbb4;
+}
+.list_name_CL{
+  color: #e4dbb4;
+}
+.dropdown_CL,.card_CL{
+  background-color: #132328;
+  color: #e4dbb4;
+}
+table,th,td{
+  border: 1px solid #132328;
+}
