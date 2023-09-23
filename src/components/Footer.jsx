@@ -6,9 +6,13 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+  if (location.pathname === "/admin") {
+    return null;
+  }
   return (
     <footer className="mt-3">
       <div className="container mt-3">
@@ -58,7 +62,10 @@ const Footer = () => {
             </div>
             <ul className="footer-ul">
               <li>
-                <Link to="/aboutus" className="footer-text text-decoration-none">
+                <Link
+                  to="/aboutus"
+                  className="footer-text text-decoration-none"
+                >
                   About Us
                 </Link>
               </li>
@@ -83,7 +90,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p class="copyright-text text-center" id="cr">
+      <p className="copyright-text text-center" id="cr">
         &copy; Copyright 2023 Chillax
       </p>
     </footer>

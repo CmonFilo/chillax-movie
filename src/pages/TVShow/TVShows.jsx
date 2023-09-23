@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
-// import { Pagination } from "antd";
+import { Pagination } from "antd";
 
 const TVShows = () => {
   const [shows, setShows] = useState([]);

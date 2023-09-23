@@ -8,6 +8,8 @@ import AboutUs from "./pages/aboutUs/AboutUs";
 import MovieDetails from "./pages/movies/MovieDetails";
 import TVShows from "./pages/TVShow/TVShows";
 import TVShow from "./pages/TVShow/TVShow";
+import Admin from "./pages/admin/admin";
+import AdminSidebar from "./pages/admin/AdminSidebar";
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
           <Route path=":id" element={<MovieDetails />} />
         </Route>
         <Route path="*" element={<Missing />} />
+        <Route path="admin" element={<Admin />}/>
       </Routes>
       <Footer />
     </Router>
