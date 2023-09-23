@@ -7,11 +7,9 @@ import AboutUs from "./pages/aboutUs/AboutUs";
 import MovieDetails from "./pages/movies/MovieDetails";
 import TVShows from "./pages/TVShow/TVShows";
 import TVShow from "./pages/TVShow/TVShow";
-import AdminSidebar from "./pages/admin/AdminSidebar";
 import Admin from "./pages/admin/Admin";
 
 function App() {
-
   return (
     <Router>
       <Navbar />

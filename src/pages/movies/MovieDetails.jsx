@@ -65,10 +65,10 @@ const MovieDetails = () => {
             className="img-fluid rounded"
             src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
             alt={movieDetails.title}
-            style={{ width: "100%", height: "500px" }}
+            style={{ width: "100%", height: "600px" }}
           />
         </div>
-        <div className="col-md-8" style={{ height: "500px" }}>
+        <div className="col-md-8" style={{ height: "600px" }}>
           <div className="card-body position-relative rounded card_CL text-center">
             <h1 className="card-title py-5">
               <span className="span_detail_CL">{movieDetails.title}</span>

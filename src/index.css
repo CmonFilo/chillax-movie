@@ -1,32 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Barlow", sans-serif;
-}
-:root {
-  --first-color: #849c84;
-  --second-color: #132328;
-  --third-color: #e4dbb4;
-  --fourth-color: #e4dbb4;
-}
-.darkTheme {
-  --first-color: rgb(24, 23, 23);
-  --second-color: #e4dbb4;
-  --third-color: rgb(24, 23, 23);
-  --fourth-color: #132328;
+  font-family: "Quicksand", sans-serif;
 }
 #root {
   background-color: #849c84;
 }
-.carousel-text,
 .figure-caption,
-.footer-text,
-.copyright-text {
-  font-family: "Inconsolata", monospace;
+.card-text {
+  font-family: "IBM Plex Sans", sans-serif;
   font-size: large;
 }
 /* navbar */
@@ -114,6 +100,9 @@ span {
 .batch {
   color: #132328;
 }
+.content {
+  border-bottom: 1px solid #132328;
+}
 
 .card_CL {
   background-color: #132328;
@@ -146,7 +135,7 @@ span {
   color: #e4dbb4;
 }
 
-.table_CL{
+.table_CL {
   background-color: #132328;
   color: #e4dbb4;
 }
@@ -159,7 +148,7 @@ th {
   padding: 8px;
 }
 
-.offcanvas_CL{
+.offcanvas_CL {
   width: 40px;
   height: 40px;
   background-color: #132328;

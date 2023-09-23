@@ -87,9 +87,7 @@ const AdminDashboard = () => {
           <div className="card_CL rounded shadow-sm p-3">
             <div className="row">
               <div className="card-body col-10 px-3">
-                <p className="card-text">
-                  Revenue
-                </p>
+                <p className="card-text">Revenue</p>
                 <h5>1045978 Ks</h5>
                 <div className="card-footer">
                   <FontAwesomeIcon icon={faArrowUp} beat />
@@ -98,11 +96,7 @@ const AdminDashboard = () => {
               </div>
               <div className="col-2 p-2 position-relative">
                 <div class="position-absolute top-50 end-0 translate-middle-y">
-                  <FontAwesomeIcon
-                    icon={faCoins}
-                    size="2xl"
-                    className="pe-2"
-                  />
+                  <FontAwesomeIcon icon={faCoins} size="2xl" className="pe-2" />
                 </div>
               </div>
             </div>
@@ -110,7 +104,10 @@ const AdminDashboard = () => {
         </div>
       </div>
       <MultiLineChart />
-      <Popular/>
+      <Popular />
+      <p className="copyright-text text-center rounded mt-3" id="cr">
+        &copy; Copyright 2023 Chillax
+      </p>
     </div>
   );
 };
