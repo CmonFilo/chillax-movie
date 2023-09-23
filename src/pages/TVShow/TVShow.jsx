@@ -28,7 +28,7 @@ const TVShowDetails = () => {
   }
 
   return (
-    <div className="container CL_container pb-4 my-5">
+    <div className="container CL_container pb-3 my-5">
       <div className="row g-0">
         <div className="col-md-4">
           <img
