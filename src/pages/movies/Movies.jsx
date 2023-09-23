@@ -49,7 +49,7 @@ const Movies = () => {
                   className="figure-img img-fluid rounded"
                   style={{ width: "300px", height: "480px" }}
                 />
-                <figcaption class="figure-caption">
+                <figcaption className="figure-caption">
                   <span>{movie.title}</span>
                 </figcaption>
               </figure>
