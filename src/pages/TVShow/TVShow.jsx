@@ -1,9 +1,7 @@
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-
 
 const TVShowDetails = () => {
   const { id } = useParams();
@@ -49,7 +47,22 @@ const TVShowDetails = () => {
               <p className="card-text">
                 First Air Date: {tvShowDetails.first_air_date}
               </p>
-              <p className="card-text mb-5">Rating: {tvShowDetails.vote_average}</p>
+              <p className="card-text mb-5">
+                Rating: {tvShowDetails.vote_average}
+              </p>
+              <p
+                style={{
+                  textAlign: "center",
+                  fontWeight: "bold",
+                  margin: "25px",
+                  fontSize: "20px",
+                  color: "#e4dbb4",
+                }}>
+                Back To All TV Shows{" "}
+                <Link to={"/shows"} style={{ textDecoration: "none" }}>
+                  "CLICK ME"
+                </Link>
+              </p>
             </div>
           </div>
         </div>

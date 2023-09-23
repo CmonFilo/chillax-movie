@@ -25,48 +25,79 @@ const MovieDetails = () => {
   }
 
   return (
-    <div className="details">
-      <h1
-        style={{ textAlign: "center", margin: "30px 0", fontWeight: "bolder" }}>
-        {movieDetails.title}
-      </h1>
-      <img
-        src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
-        alt={movieDetails.title}
-        style={{
-          width: "300px",
-          height: "480px",
-          marginLeft: "15%",
-          borderRadius: "5%",
-        }}
-      />
-      <div
-        className="detailsData"
-        style={{
-          width: "50%",
-          left: "40%",
-          position: "absolute",
-          top: "300px",
-          textAlign: "justify",
-          right: "30px",
-        }}>
-        <div>{movieDetails.overview}</div> <br />
-        <br />
-        <div>Release Date: {movieDetails.release_date}</div>
-        <div>Rating: {movieDetails.vote_average}</div>
+    // <div className="details">
+    //   <h1
+    //     style={{ textAlign: "center", margin: "30px 0", fontWeight: "bolder" }}>
+    //     {movieDetails.title}
+    //   </h1>
+    //   <img
+    //     src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
+    //     alt={movieDetails.title}
+    //     style={{
+    //       width: "300px",
+    //       height: "480px",
+    //       marginLeft: "15%",
+    //       borderRadius: "5%",
+    //     }}
+    //   />
+    //   <div
+    //     className="detailsData"
+    //     style={{
+    //       width: "50%",
+    //       left: "40%",
+    //       position: "absolute",
+    //       top: "300px",
+    //       textAlign: "justify",
+    //       right: "30px",
+    //     }}>
+    //     <div>{movieDetails.overview}</div> <br />
+    //     <br />
+    // <div>Release Date: {movieDetails.release_date}</div>
+    // <div>Rating: {movieDetails.vote_average}</div>
+    //   </div>
+
+    // </div>
+    <div className="container CL_container pb-5 my-5">
+      <div className="row g-0">
+        <div className="col-md-4">
+          <img
+            className="img-fluid rounded-start"
+            src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
+            alt={movieDetails.title}
+          />
+        </div>
+        <div className="col-md-8">
+          <div className="card-body position-relative rounded-end card_CL text-center">
+            <h1 className="card-title py-5">
+              <span className="span_detail_CL">{movieDetails.title}</span>
+            </h1>
+            <p className="card-text position-absolute top-50 start-50 translate-middle">
+              {movieDetails.overview}
+            </p>
+            <div className="position-absolute bottom-0 start-50 translate-middle-x">
+              <p className="card-text">
+                Release Date: {movieDetails.release_date}
+              </p>
+              <p className="card-text mb-5">
+                Rating: {movieDetails.vote_average}
+              </p>
+              <p
+                style={{
+                  textAlign: "center",
+                  fontWeight: "bold",
+                  margin: "25px",
+                  fontSize: "20px",
+                  color: "#e4dbb4",
+                }}>
+                Back To All Movies{" "}
+                <Link to={"/"} style={{ textDecoration: "none" }}>
+                  "CLICK ME"
+                </Link>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <p
-        style={{
-          textAlign: "center",
-          fontWeight: "bold",
-          margin: "25px",
-          fontSize: "20px",
-        }}>
-        Back To All Movies{" "}
-        <Link to={"/"} style={{ textDecoration: "none" }}>
-          "CLICK ME"
-        </Link>
-      </p>
     </div>
   );
 };

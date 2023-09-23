@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { Pagination } from "antd";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -28,9 +27,9 @@ const Movies = () => {
 
   const addFavoriteMovie = (movie) => {
     const newFavoriteList = [...favorites, movie];
-    setFavorites(newFavoriteList); 
+    setFavorites(newFavoriteList);
     console.log(setFavorites);
-  }
+  };
 
   return (
     <div className="container CL_container">
@@ -41,7 +40,6 @@ const Movies = () => {
         {movies.map((movie) => (
           <div className="col-4 col-md-3 text-center" key={movie.id}>
             <Link to={`${movie.id}`}>
-
               <figure className="figure">
                 <img
                   src={`${basePosterUrl}${movie.poster_path}`}
@@ -58,22 +56,13 @@ const Movies = () => {
         ))}
       </div>
 
-      <div className="pagination justify-content-center mb-3">
-        <button
-          className="btn pagination-btn_CL p-2 me-2"
-          onClick={() => handlePageChange(currentPage - 1)}
-          disabled={currentPage === 1}
-        >
-          <FontAwesomeIcon icon={faAnglesLeft} className="me-2" />
-          Previous
-        </button>
-        <button
-          className="btn pagination-btn_CL p-2"
-          onClick={() => handlePageChange(currentPage + 1)}
-          disabled={currentPage === totalPages}
-          style={{textAlign: 'center'}}
-        />
-      </div>
+      <Pagination
+        defaultCurrent={1}
+        total={150}
+        onChange={(currentPage) => setCurrentPage(currentPage)}
+        disabled={currentPage === totalPages}
+        style={{ textAlign: "center" }}
+      />
     </div>
   );
 };

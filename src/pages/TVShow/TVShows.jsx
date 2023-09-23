@@ -31,9 +31,8 @@ const TVShows = () => {
       </h1>
       <div className="row">
         {shows.map((show) => (
-            <div className="col-4 col-md-3 text-center" key={show.id}>
-              <Link to={`/shows/${show.id}`}>
-
+          <div className="col-4 col-md-3 text-center" key={show.id}>
+            <Link to={`/shows/${show.id}`}>
               <figure className="figure">
                 <img
                   src={`${basePosterUrl}${show.poster_path}`}
@@ -51,24 +50,13 @@ const TVShows = () => {
         ))}
       </div>
 
-      <div className="pagination justify-content-center mb-3">
-        <button
-          className="btn pagination-btn_CL p-2 me-2"
-          onClick={() => handlePageChange(currentPage - 1)}
-          disabled={currentPage === 1}
-        >
-          <FontAwesomeIcon icon={faAnglesLeft} className="me-2" />
-          Previous
-        </button>
-        <button
-          className="btn pagination-btn_CL p-2"
-          onClick={() => handlePageChange(currentPage + 1)}
-          disabled={currentPage === totalPages}
-        >
-          Next
-          <FontAwesomeIcon icon={faAnglesRight} className="ms-2" />
-        </button>
-      </div>
+      <Pagination
+        defaultCurrent={1}
+        total={150}
+        onChange={(currentPage) => setCurrentPage(currentPage)}
+        disabled={currentPage === totalPages}
+        style={{ textAlign: "center" }}
+      />
     </div>
   );
 };
