@@ -12,14 +12,13 @@ const MovieDetails = () => {
     const apiKey = "936af801afc98e81ee8d785b94b8e3a8";
     const apiUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`;
 
-    axios
-      .get(apiUrl)
-      .then((response) => {
+    try {
+      axios.get(apiUrl).then((response) => {
         setMovieDetails(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching movie details:", error);
       });
+    } catch (error) {
+      console.error("Error fetching movie details:", error);
+    }
   }, [id]);
 
   if (!movieDetails) {

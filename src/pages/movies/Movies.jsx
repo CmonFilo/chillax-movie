@@ -9,10 +9,12 @@ const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [favorites, setFavorites] = useState([]);
+  const [query, setQuery]=useState('');
 
   useEffect(() => {
+
     const apiUrl = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=936af801afc98e81ee8d785b94b8e3a8&page=${currentPage}`;
+    
 
     axios
       .get(apiUrl)
@@ -25,13 +27,13 @@ const Movies = () => {
       });
   }, [currentPage]);
 
-  const basePosterUrl = "https://image.tmdb.org/t/p/w500";
-
-  const addFavoriteMovie = (movie) => {
-    const newFavoriteList = [...favorites, movie];
-    setFavorites(newFavoriteList);
-    console.log(setFavorites);
+  const handleSearch = (query) => {
+    axios.get(`${searchUrl}?q=${query}`)
+      .then(response => setSearchResults(response.data))
+      .catch(error => console.error('Error searching for movies:', error));
   };
+
+  const basePosterUrl = "https://image.tmdb.org/t/p/w500";
 
   return (
     <div className="container CL_container">
