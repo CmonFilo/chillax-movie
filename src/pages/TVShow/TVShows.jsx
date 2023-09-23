@@ -42,7 +42,7 @@ const TVShows = () => {
                   className="figure-img img-fluid rounded"
                 />
 
-                <figcaption className="figure-caption fs-5">
+                <figcaption className="figure-caption fs-6 fs-md-5">
                   <span>{show.name}</span>
                 </figcaption>
               </figure>
