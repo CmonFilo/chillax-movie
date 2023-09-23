@@ -2,12 +2,12 @@
     "name": "Chillax Movie Website",
     "short_name": "Chillax",
     "description": "This is the test progressive web application for chillax.",
-    "theme_color": "#132328",
+    "theme_color": "#2b5b69",
     "background_color": "#849c84",
     "display": "standalone",
     "orientation": "any",
     "scope": "/",
-    "start_url": "/",
+    "start_url": "/chillax",
     "icons": [
         {
             "src": "icons/icon_192.png",
