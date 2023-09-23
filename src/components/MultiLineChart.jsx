@@ -26,45 +26,19 @@ class MultiLineChart extends Component {
   render() {
     return (
       <div className="row flex-column flex-md-row m-2">
-        <h2 className="fw-bold" style={{ color: "#132328" }}>
-          Analytics
-        </h2>
-        <div className="col-12 col-md-4 mt-2">
+        <div className="col-12 mt-2">
+          <h2 className="fw-bold" style={{ color: "#132328" }}>
+            Analytics
+          </h2>
           <Chart
+          className="mt-3 shadow"
+            style={{ height: "400px" }}
             chartType="LineChart"
             loader={<div>Loading Chart</div>}
             data={LineData}
             options={LineChartOptions}
             rootProps={{ "data-testid": "2" }}
           />
-        </div>
-        <div className="col-12 col-md-8 mt-2">
-          <table>
-            <tr>
-              <th>Popular Movies</th>
-              <th>Popular Movies</th>
-            </tr>
-            <tr>
-              <td>Barbie</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>The Nun II</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Oppenheimer</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Special Delivery</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Talk to Me</td>
-              <td></td>
-            </tr>
-          </table>
         </div>
       </div>
     );

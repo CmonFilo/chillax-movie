@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { Pagination } from "antd";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -56,31 +58,13 @@ const Movies = () => {
         ))}
       </div>
       <Pagination
+        className="mb-3"
         defaultCurrent={1}
         total={150}
         onChange={(currentPage) => setCurrentPage(currentPage)}
         disabled={currentPage === totalPages}
         style={{ textAlign: "center" }}
       />
-      <div className="pagination justify-content-center mb-3">
-        <button
-          className="btn pagination-btn_CL p-2 me-2"
-          onClick={() => handlePageChange(currentPage - 1)}
-          disabled={currentPage === 1}
-        >
-          <FontAwesomeIcon icon={faAnglesLeft} className="me-2" />
-          Previous
-        </button>
-        <button
-          className="btn pagination-btn_CL p-2"
-          onClick={() => handlePageChange(currentPage + 1)}
-          disabled={currentPage === totalPages}
-          style={{ textAlign: "center" }}
-        >
-          Next
-          <FontAwesomeIcon icon={faAnglesRight} className="ms-2" />
-        </button>
-      </div>
     </div>
   );
 };

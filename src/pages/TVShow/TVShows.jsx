@@ -53,6 +53,7 @@ const TVShows = () => {
       </div>
 
       <Pagination
+        className="mb-3"
         defaultCurrent={1}
         total={150}
         onChange={(currentPage) => setCurrentPage(currentPage)}

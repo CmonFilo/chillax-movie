@@ -54,7 +54,7 @@
   color: #e4dbb4;
 }
 .darkmode_btn_CL {
-  background-color:#e4dbb4;
+  background-color: #e4dbb4;
   color: #132328;
 }
 .darkmode_btn_CL:hover {
@@ -125,25 +125,43 @@ span {
 }
 
 /* admin page */
-.sidebar_CL{
+.sidebar_CL {
   background-color: #132328;
   color: #e4dbb4;
 }
-.admin_list_CL{
+.admin_list_CL {
   height: 100%;
   list-style: none;
-  border-top: 1px solid #e4dbb4;
+  /* border-top: 1px solid #e4dbb4; */
 }
-.list-item_CL{
+.list-item_CL {
   border-bottom: 1px solid #e4dbb4;
 }
-.list_name_CL{
+.list_name_CL {
   color: #e4dbb4;
 }
-.dropdown_CL,.card_CL{
+.dropdown_CL,
+.card_CL {
   background-color: #132328;
   color: #e4dbb4;
 }
-table,th,td{
-  border: 1px solid #132328;
+
+.table_CL{
+  background-color: #132328;
+  color: #e4dbb4;
+}
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  text-align: left;
+  padding: 8px;
+}
+
+.offcanvas_CL{
+  width: 40px;
+  height: 40px;
+  background-color: #132328;
+  color: #e4dbb4;
 }
