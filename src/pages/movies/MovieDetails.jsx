@@ -83,19 +83,6 @@ const MovieDetails = () => {
               <p className="card-text mb-5">
                 Rating: {movieDetails.vote_average}
               </p>
-              <p
-                style={{
-                  textAlign: "center",
-                  fontWeight: "bold",
-                  margin: "25px",
-                  fontSize: "20px",
-                  color: "#e4dbb4",
-                }}>
-                Back To All Movies{" "}
-                <Link to={"/"} style={{ textDecoration: "none" }}>
-                  "CLICK ME"
-                </Link>
-              </p>
             </div>
           </div>
         </div>
