@@ -11,6 +11,7 @@ const AboutUs = () => {
     >
       <div className="content p-4">
         <h1 className="text-center">Lights, camera, action! </h1>
+        <h5 className="text-center mt-3">Watch Movies with Chillax.</h5>
         <div className="text-center mt-3">
           Welcome to a world where creativity knows no bounds and storytelling
           takes center stage. We are the passionate minds behind Chillax, a
